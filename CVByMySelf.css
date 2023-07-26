@@ -7,7 +7,6 @@ body {
 
 .container {
     display: flex;
-    height: 150vh;/*не розумію як щоб автоматично було*/
 }
 
 .left-side {
@@ -38,4 +37,25 @@ img {
 
 .text-container {
     margin-top: 20px;
+}
+/* Змінюємо властивості кілець у списках */
+ul {
+    list-style-type: none; /* Відключаємо стандартний стиль маркерів */
+    padding: 0; /* Відключаємо зовнішні відступи у списках */
+}
+
+ul li {
+    position: relative;
+    padding-left: 25px; /* Додаємо відступ зліва для місця під кільце */
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    top: 7px; /* Відступ зверху для вирівнювання кільця */
+    left: 0;
+    width: 10px; /* Розмір кільця */
+    height: 10px; /* Розмір кільця */
+    border: 4px solid rgb(100, 161, 196); /* Змінюємо колір та товщину кільця */
+    border-radius: 50%; /* Змінюємо форму кільця на круг */
 }
